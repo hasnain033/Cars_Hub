@@ -6,8 +6,9 @@ import CarCard from '@/components/CarCard'
 import Showmore from "@/components/Showmore"
 import { fetchCars } from "@/utils"
 import { fuels, yearsOfProduction } from "@/constants"
+import { HomeProps } from "@/types"
 
-async function Home({searchParams}) {
+async function Home({searchParams}:HomeProps) {
   const allCars = await fetchCars({
     manufacturer:searchParams.manufacturer || '',
     year:searchParams.year || 2022,
